@@ -57,9 +57,9 @@ function descriptografar() {
             i += 3;
         }
     }
-    mostraMensagem = document.getElementById("mostraMensagemDecodificada");
-
-    mostraMensagem.innerHTML = textoD;
+    mostraMensagem = document.getElementById("mostraMensagemDecodificada");   
+    mostraMensagem.innerHTML = "<p>"+textoD+"</p>"+
+    "<button style = 'position: absolute; bottom: 20px; background-color: transparent; 'onclick='autoCopiar()'>Copiar</button>";
     mostraMensagem.style.textAlign = "left";
     mostraMensagem.style.paddingTop = "10%";
 }
