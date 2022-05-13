@@ -32,12 +32,15 @@ function criptografar() {
         }
     }
     mostraMensagem = document.getElementById("mostraMensagemDecodificada");
-    mostraMensagem.innerHTML = "<p>"+textoCriptografado+"</p>"+
-    "<button style = 'position: absolute; bottom: 20px; background-color: transparent; 'onclick='autoCopiar()'>Copiar</button>";
+    if(window.matchMedia("(min-width: 992px)").matches){
+        mostraMensagem.innerHTML = "<p>" + textoCriptografado + "</p>"
+        + "<button style = 'position: absolute; bottom: 20px; background-color: transparent; 'onclick='autoCopiar()'>Copiar</button>";
+    }else{
+        mostraMensagem.innerHTML = "<p>" + textoCriptografado + "</p>";
+    }
     mostraMensagem.style.textAlign = "left";
     mostraMensagem.style.paddingTop = "10%";
 }
-
 function descriptografar() {
     var textoC = document.getElementById("textoParaCriptografar").value;
     var textoD = "";
@@ -58,12 +61,15 @@ function descriptografar() {
         }
     }
     mostraMensagem = document.getElementById("mostraMensagemDecodificada");   
-    mostraMensagem.innerHTML = "<p>"+textoD+"</p>"+
-    "<button style = 'position: absolute; bottom: 20px; background-color: transparent; 'onclick='autoCopiar()'>Copiar</button>";
+    if(window.matchMedia("(min-width: 992px)").matches){
+        mostraMensagem.innerHTML = "<p>" + textoD + "</p>"
+        + "<button style = 'position: absolute; bottom: 20px; background-color: transparent; 'onclick='autoCopiar()'>Copiar</button>";
+    }else{
+        mostraMensagem.innerHTML = "<p>" + textoD + "</p>";
+    }
     mostraMensagem.style.textAlign = "left";
     mostraMensagem.style.paddingTop = "10%";
 }
-
 function isVowel(c) {
     return ['a', 'e', 'i', 'o', 'u'].indexOf(c) !== -1;
 }

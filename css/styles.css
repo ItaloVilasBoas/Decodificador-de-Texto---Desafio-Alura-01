@@ -33,7 +33,8 @@ textarea:focus, input:focus{
 }
 /* BOTOES*/
 .container-botoesEalerta{
-    float: right;
+    position: relative;
+    left: 15%;
 }
 button{
     border-radius: 24px;
@@ -92,6 +93,7 @@ button{
 @media screen and (max-width: 480px) {
     .container-botoesEalerta{
         float: none;
+        left: 0;
     }
     .botaoCriptografar{
         width: 100%;
